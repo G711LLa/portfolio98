@@ -1,0 +1,297 @@
+@keyframes animateBackground {
+    0% {
+        background-color: #231e3f; /* Начальный цвет фона */
+    }
+    50% {
+        background-color: #382d58; /* Цвет фона через половину анимации */
+    }
+    100% {
+        background-color: #231e3f; /* Конечный цвет фона */
+    }
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Высота может быть адаптирована под ваши нужды */
+    overflow: hidden;
+}
+
+.animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: animateBackground 20s ease infinite; /* Продолжительность и стиль анимации */
+}
+
+/* Анимация бегущей строки */
+.container-fluid {
+    position: relative;
+    overflow: hidden;
+    height: 100px; /* Настройте по своему дизайну */
+}
+
+.loop-container {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.item {
+    display: inline-block;
+    padding-right: 50px; /* Расстояние между элементами */
+    font-size: 24px; /* Настройте по своему дизайну */
+    opacity: 0.8;
+    animation: fadeEffect 3s ease infinite alternate;
+}
+
+/* Эффект размытия и плавности */
+@keyframes fadeEffect {
+    0% {
+        opacity: 0.3;
+        filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Общие стили */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #111;
+    line-height: 1.6; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 10px; 
+    color: #ffc107;
+}
+
+a {
+    color: #ffc107; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+a:hover {
+    color: #d4a300;
+}
+
+/* Header */
+header {
+    background-color: transparent;
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header .logo a {
+    font-size: 24px;
+    color: #ffc107;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust overlay color and opacity */
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #d4a300;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 60px 0;
+    background-color: #111;
+}
+
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#portfolio .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+#portfolio .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* About Section */
+#about {
+    padding: 60px 0;
+    background-color: #222;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: 60px 0;
+    background-color: #111;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+#contact button {
+    padding: 10px;
+    background-color: #ffc107;
+    color: #111;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #d4a300;
+}
+
+#contact .social {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#contact .social a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #ffc107;
+    transition: color 0.3s ease;
+}
+
+#contact .social a:hover {
+    color: #d4a300;
+}
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    background-color: #111;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

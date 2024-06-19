@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimash Abenov - Шеф-повар</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+   <header id="header" class="sticky">
+        <div class="container">
+            <div class="logo">
+                <a href="#hero">Dimash Abenov Co., LTD.</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Главная</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" style="background-image: url('images/1920-luxury-dining-experience-in-the-cityscape-night.jpg');"> 
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Dimash Abenov</h1>
+                <h2>Шеф-повар</h2>
+                <p>Творю кулинарные шедевры,<br>пробуждающие эмоции</p>
+                <a href="#portfolio" class="btn">Портфолио</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container" data-aos="fade-up">
+            <h2>Портфолио</h2>
+            <div class="gallery">
+                <!-- Изображения будут загружены сюда -->
+            </div>
+        </div>
+    </section>
+
+    <section data-bs-version="5.1" class="gallery10 cid-ue5Y2FUwue" id="features-69-ue5Y2FUwue">
+        <div class="loop-container" style="position: relative; display: inline-flex; white-space: nowrap; transform: translateX(-5.3%); z-index: 1;">
+            <div class="item display-1" data-linewords="Ферран Адриа (Ferran Adrià): Высокая кухня — это путешествие в мир вкусов, где каждая деталь имеет значение. Она призвана удивлять и вдохновлять, оставляя незабываемые впечатления. " data-direction="-1" data-speed="0.05">Ферран Адриа (Ferran Adrià): Высокая кухня — это путешествие в мир вкусов, где каждая деталь имеет значение. Она призвана удивлять и вдохновлять, оставляя незабываемые впечатления. &nbsp;</div>
+            <div class="item display-1" data-linewords="Марио Батали (Mario Batali): Высокая кухня — это не только о пище. Это о культуре, истории, и страсти, вложенной в каждое блюдо. Это опыт, который объединяет людей и создает воспоминания." data-direction="-1" data-speed="0.05" style="position: absolute; left: 100%;">Марио Батали (Mario Batali): Высокая кухня — это не только о пище. Это о культуре, истории, и страсти, вложенной в каждое блюдо. Это опыт, который объединяет людей и создает воспоминания. * &nbsp;</div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-right">Обо мне</h2>
+            <p data-aos="fade-left">Я уверен, что мои обширные знания, практический опыт, целеустремленность и преданность своему делу станут ценным активом для Вашего ресторана. 
+            Разработка кулинарных концепций, управление кухонным персоналом и обеспечение высокого стандарта сервиса и инновационные подходы к гастрономическому искусству.</p> 
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 data-aos="fade-up">Контакты</h2>
+            <form action="send_email.php" method="POST" data-aos="fade-up" data-aos-delay="200"> 
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <input type="email" id="email" name="email" placeholder="Ваш email" required>
+                <textarea id="message" name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+            <div class="social" data-aos="fade-up" data-aos-delay="400">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Dimash Abenov. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // Продолжительность анимации
+            once: true, // Анимировать только один раз
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
